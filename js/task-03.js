@@ -24,29 +24,37 @@ const images = [
 // Все элементы галереи должны добавляться в DOM за одну операцию вставки.
 // Добавь минимальное оформление галереи флексбоксами или гридами через
 // CSS классы.
-const listElement = document.querySelector('ul');
+// const listElement = document.querySelector('ul');
 
-const makeGalery = options => {
-    return options.map(option => {
-      const newItemEl = document.createElement('li');
-          newItemEl.classList.add('item');
-      const imageElement = document.createElement('img');
-      imageElement.classList.add('item-image');
-        imageElement.alt = option.alt;
-      imageElement.src = option.url;
-      newItemEl.append(imageElement);
+// const makeGalery = options => {
+//     return options.map(option => {
+//       const newItemEl = document.createElement('li');
+//           newItemEl.classList.add('item');
+//       const imageElement = document.createElement('img');
+//       imageElement.classList.add('item-image');
+//         imageElement.alt = option.alt;
+//       imageElement.src = option.url;
+//       newItemEl.append(imageElement);
 
-        // console.log(newItemEl);
+//         // console.log(newItemEl);
 
-        return newItemEl, imageElement;
-    });
-};
+//         return newItemEl, imageElement;
+//     });
+// };
 
-const elements = makeGalery(images);
-console.log(elements);
+// const elements = makeGalery(images);
+// console.log(elements);
 // const itemElement = document.querySelector('li');
 
-listElement.insertAdjacentHTML('afterend', listElement.firstElementChild);
-      // console.log(listElement.firstElementChild);
+// listElement.insertAdjacentHTML('afterend', listElement);
+//       console.log(listElement);
 // const elements = makeList(ingredients);
 // listElement.append(...elements);
+for (let el of images)
+    document
+        .querySelector('.gallery')
+        .insertAdjacentHTML(
+            'beforeEnd',
+            `<li><img src="${el.url}" alt="${el.alt}"></li>`,
+  );
+        

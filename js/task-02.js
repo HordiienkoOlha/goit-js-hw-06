@@ -34,5 +34,6 @@ const makeList = options => {
   
 const elements = makeList(ingredients);
 listElement.append(...elements);
+console.log(elements);
 
 

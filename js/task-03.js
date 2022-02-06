@@ -22,34 +22,11 @@ const images = [
 //     и метод insertAdjacentHTML().
 
 // Все элементы галереи должны добавляться в DOM за одну операцию вставки.
+
 // Добавь минимальное оформление галереи флексбоксами или гридами через
 // CSS классы.
-// const listElement = document.querySelector('ul');
 
-// const makeGalery = options => {
-//     return options.map(option => {
-//       const newItemEl = document.createElement('li');
-//           newItemEl.classList.add('item');
-//       const imageElement = document.createElement('img');
-//       imageElement.classList.add('item-image');
-//         imageElement.alt = option.alt;
-//       imageElement.src = option.url;
-//       newItemEl.append(imageElement);
 
-//         // console.log(newItemEl);
-
-//         return newItemEl, imageElement;
-//     });
-// };
-
-// const elements = makeGalery(images);
-// console.log(elements);
-// const itemElement = document.querySelector('li');
-
-// listElement.insertAdjacentHTML('afterend', listElement);
-//       console.log(listElement);
-// const elements = makeList(ingredients);
-// listElement.append(...elements);
 for (let el of images)
     document
         .querySelector('.gallery')

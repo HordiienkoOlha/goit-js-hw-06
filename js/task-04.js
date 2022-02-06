@@ -5,32 +5,28 @@
 // или уменьшай значение счтетчика.
 
 // Обновляй интерфейс новым значением переменной counterValue.
-const counterValue = 0;
+let counterValue = 0;
+const action = document.querySelectorAll('button');
+// console.log(action);
+// console.log(action[0].dataset.action);
+// console.log(action[1].dataset.action);
 
-const action = document.querySelectorAll('button')
-console.log(action);
-console.log(action[0].dataset.action);
-console.log(action[1].dataset.action);
+const buttonMinus = document.querySelector('button[data-action="decrement"]');
+// console.log(buttonMinus);
+const buttonPlus = document.querySelector('button[data-action="increment"]');
+// console.log(buttonPlus);
+const value = document.querySelector('#value');
 
+const eventDecrement = () => {
+    counterValue -= 1;
+    value.textContent = counterValue
+    console.log(counterValue);
+};
+const eventIncrement = () => {
+    counterValue += 1;
+    value.textContent = counterValue
+    console.log(counterValue);
+};
 
-
-
-
-// formRef.addEventListener('submit', event => {
-//     event.preventDefault();
-
-//     const userInput = event.currentTarget.elements.amount.value;
-
-//     if (!userInput) return;
-
-//     const item = document.createElement('li');
-//     item.classList.add('item');
-//     item.textContent = userInput;
-
-//     listRef.append(item);
-
-//     account.deposit(Number(userInput));
-//     totalAmountRef.textContent = account.getBalance();
-
-//     formRef.reset();
-// });
+buttonMinus.addEventListener('click', eventDecrement);
+buttonPlus.addEventListener('click', eventIncrement);

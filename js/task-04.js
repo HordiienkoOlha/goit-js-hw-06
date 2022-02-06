@@ -7,21 +7,30 @@
 // Обновляй интерфейс новым значением переменной counterValue.
 const counterValue = 0;
 
-formRef.addEventListener('submit', event => {
-    event.preventDefault();
+const action = document.querySelectorAll('button')
+console.log(action);
+console.log(action[0].dataset.action);
+console.log(action[1].dataset.action);
 
-    const userInput = event.currentTarget.elements.amount.value;
 
-    if (!userInput) return;
 
-    const item = document.createElement('li');
-    item.classList.add('item');
-    item.textContent = userInput;
 
-    listRef.append(item);
 
-    account.deposit(Number(userInput));
-    totalAmountRef.textContent = account.getBalance();
+// formRef.addEventListener('submit', event => {
+//     event.preventDefault();
 
-    formRef.reset();
-});
+//     const userInput = event.currentTarget.elements.amount.value;
+
+//     if (!userInput) return;
+
+//     const item = document.createElement('li');
+//     item.classList.add('item');
+//     item.textContent = userInput;
+
+//     listRef.append(item);
+
+//     account.deposit(Number(userInput));
+//     totalAmountRef.textContent = account.getBalance();
+
+//     formRef.reset();
+// });

@@ -26,12 +26,10 @@ const images = [
 // Добавь минимальное оформление галереи флексбоксами или гридами через
 // CSS классы.
 
-
-for (let el of images)
+for (let image of images)
     document
         .querySelector('.gallery')
         .insertAdjacentHTML(
             'beforeEnd',
-            `<li><img src="${el.url}" alt="${el.alt}"></li>`,
-  );
-        
+            `<li><img src="${image.url}" alt="${image.alt}"></li>`,
+        );

@@ -21,20 +21,8 @@ nameInput.addEventListener('input', event => {
     const userInput = event.currentTarget.value;
     nameOutput.textContent = userInput;
 
-    if (!userInput) return;
+    if (userInput === "") {
+    nameOutput.textContent = "Anonymous";
+  }
     
 });
-
-// const nameInput = document.querySelector('#name-input');
-// const nameOutput = document.querySelector('#name-output');
-
-// nameInput.addEventListener('input', inputEvent)
-
-// function inputEvent(event) {
-//     event.preventDefault();
-
-//     const userInput = event.currentTarget.value;
-//     nameOutput.textContent = userInput;
-// console.log(userInput);
-//     if (!userInput) return;
-// }

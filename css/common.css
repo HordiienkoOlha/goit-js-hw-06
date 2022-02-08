@@ -23,8 +23,8 @@ button {
 }
 img {
     display: block;
-    max-width: 100%;
-    height: auto;
+    width: 300px;
+    height: 200px;
 }
 
 a {
@@ -35,21 +35,11 @@ a {
     justify-content: space-between;
     margin-left: -30px;
     margin-bottom: -30px;
+    margin-top: 30px;
 }
 .gallery > li {
     position: relative;
     border-radius: 4px;
     flex-basis: calc((100% - 3 * 30px) / 3);
     margin-left: 30px;
-    height: 200px;
-    width: 300px;
-}
-.gallery > img {
-    display: block;
-
-    height: 100%;
-    width: 100%;
-
-    background-size: cover;
-    background-position: center;
 }

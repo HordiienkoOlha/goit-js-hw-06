@@ -25,11 +25,19 @@ const images = [
 
 // Добавь минимальное оформление галереи флексбоксами или гридами через
 // CSS классы.
+const list = document.querySelector('.gallery');
+// console.log(list);
 
-for (let image of images)
-    document
-        .querySelector('.gallery')
-        .insertAdjacentHTML(
-            'beforeEnd',
-            `<li><img src="${image.url}" alt="${image.alt}"></li>`,
-        );
+// for (let image of images)
+//     document
+//         .querySelector('.gallery')
+//         .insertAdjacentHTML(
+//             'beforeEnd',
+//             `<li><img src="${image.url}" alt="${image.alt}"></li>`,
+//         );
+
+const newList = images
+    .map(image => `<li><img src="${image.url}" alt="${image.alt}"></li>`)
+    .join('');
+
+list.insertAdjacentHTML('beforeend', newList);

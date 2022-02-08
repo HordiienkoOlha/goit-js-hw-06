@@ -23,10 +23,9 @@ function editStyle(event) {
     const userInput = event.currentTarget.value.length;
     
     const lengthInput = inputText.getAttribute('data-length');
-    // const lengthInput = event.currentTarget.dataset.length;
-        console.log(lengthInput);
+
     
-    if (userInput == lengthInput) {
+    if (Number(userInput) === Number(lengthInput)) {
         this.classList.add('valid');
         this.classList.remove('invalid');
     } else {

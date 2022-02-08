@@ -32,10 +32,10 @@ function onFormSubmit(event) {
         email,
         password,
     };
-    console.log(elements);
-    if (!email || !password) {
-        window.alert('Все поля должны быть заполнены!');
-    }
+
+
+    (!email || !password) ?
+        window.alert('Все поля должны быть заполнены!') : console.log(elements);
 
     form.reset();
 }
